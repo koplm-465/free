@@ -1,0 +1,5 @@
+pyTelegramBotAPI
+aiofiles
+opencv-python-headless
+ddddocr
+python-dotenv
