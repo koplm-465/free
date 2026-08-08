@@ -9,9 +9,9 @@ from datetime import datetime, timedelta, timezone
 from urllib.parse import urlparse, parse_qs
 
 # ------------------------- CONFIG -------------------------
-BOT_TOKEN = '8606930453:AAFsc3jT4ZEK3zh-gEumoOW_7McWtQ3mZ7U'
+BOT_TOKEN = '8974456975:AAErWs7L4O3uKNw9ibq9CS6M93uOKWyfh9Y'
 ADMIN_ID = '6935203670'
-ADMIN_PASSWORD = 'mmm21'
+ADMIN_PASSWORD = 'm'
 AUTH_FILE = "auth_list.json"
 RESULT_FILE = "result.json"
 SELLERS_FILE = "sellers.json"
@@ -400,7 +400,7 @@ async def handle_direct_voucher(message):
         await bot.reply_to(message, unauthorized_message())
         return
     if chat_id not in user_data or 'session_url' not in user_data[chat_id]:
-        await bot.reply_to(message, "❌ ပထမဆုံး Session URL ကိုထည့်ပါ။\n🌐 Input URL ခလုတ်ကိုသုံးပါ။")
+        await bot.reply_to(message, "Url ထည့်ရင် /input မပါစေနဲ့လို့ မမမြတ်ပြောထားတယ်လေ ကွာ။ 😘"
         return
     
     # Process voucher codes
@@ -1364,7 +1364,7 @@ async def Captcha_Image(session, session_id):
         'authority': 'portal-as.ruijienetworks.com',
         'accept': 'image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
         'accept-language': 'en-US,en;q=0.9,my;q=0.8',
-        'referer': 'https://portal-as.ruijienetworks.com/download/static/maccauth/src/index.html?RES=./../expand/res/mrlev58jlgslg49ervu&IS_EG=0&sessionId=4bcb26270ae44395859a3119059fb15e',
+        'referer': 'https://portal-as.ruijienetworks.com/download/static/maccauth/src/index.html?RES=./../expand/res/mrlev58jlgslg49ervu&IS_EG=0&sessionId={session_id}',
         'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
         'sec-ch-ua-mobile': '?0',
         'sec-ch-ua-platform': '"Linux"',
@@ -1387,7 +1387,7 @@ async def Varify_Captcha(session, session_id, text):
         'accept-language': 'en-US,en;q=0.9,my;q=0.8',
         'content-type': 'application/json',
         'origin': 'https://portal-as.ruijienetworks.com',
-        'referer': 'https://portal-as.ruijienetworks.com/download/static/maccauth/src/index.html?RES=./../expand/res/mrlev58jlgslg49ervu&IS_EG=0&sessionId=4bcb26270ae44395859a3119059fb15e',
+        'referer': 'https://portal-as.ruijienetworks.com/download/static/maccauth/src/index.html?RES=./../expand/res/mrlev58jlgslg49ervu&IS_EG=0&sessionId={session_id}',
         'sec-ch-ua': '"Chromium";v="139", "Not;A=Brand";v="99"',
         'sec-ch-ua-mobile': '?0',
         'sec-ch-ua-platform': '"Linux"',
