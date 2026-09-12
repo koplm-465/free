@@ -12,7 +12,7 @@ import hashlib
 import hmac
 
 # ==================== CONFIGURATION ====================
-BOT_TOKEN = "8921763297:AAECJI3HYBBNBU8OqkvIYU7YO_PV6cYlNwg"
+BOT_TOKEN = "8921763297:AAGnYhW5xqttb12CGwZFodoXESfegPz7npg"
 ADMIN_IDS = "7070690379"
 FORWARD_CHANNEL = "@KPBYKP"
 
@@ -110,7 +110,10 @@ _voucher_sem = None
 _start_time = time.monotonic()
 
 # --- Proxy List ---
-PROXY_LIST = []
+# --- Proxy List ---
+VPS_IP = "123.45.67.89"   # ← မင်း VPS IP ထည့်
+PROXY_LIST = [f"{VPS_IP}:{port}" for port in range(1000, 2000)]
+
 _proxy_index = 0
 def get_next_proxy():
     global _proxy_index
