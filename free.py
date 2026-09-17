@@ -2094,7 +2094,7 @@ async def web_server():
     app.router.add_get('/', handle)
     runner = web.AppRunner(app)
     await runner.setup()
-    port = int(os.environ.get('BOT_PORT', 8080))
+    port = int(os.environ.get('BOT_PORT', 8099))
     site = web.TCPSite(runner, '0.0.0.0', port)
     await site.start()
 
